@@ -9,8 +9,8 @@ public class Main {
         int words = 0;
         int characters = 0;
         try(BufferedReader br = new BufferedReader(new FileReader("article.txt"))) {
-            while (br.ready()) {
-                String line = br.readLine();
+            String line;
+            while ((line = br.readLine()) != null) {
                 lines++;
                 words += line.split(" ").length;
                 characters += line.length();
