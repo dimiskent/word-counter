@@ -12,7 +12,7 @@ public class Main {
             String line;
             while ((line = br.readLine()) != null) {
                 lines++;
-                words += line.split(" ").length;
+                words += line.trim().split("\\+s").length;
                 characters += line.length();
             }
         } catch (FileNotFoundException e) {
