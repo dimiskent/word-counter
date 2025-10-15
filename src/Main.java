@@ -12,6 +12,7 @@ public class Main {
             String line;
             while ((line = br.readLine()) != null) {
                 lines++;
+                if(line.trim().isEmpty()) continue;
                 words += line.trim().split("\\+s").length;
                 characters += line.length();
             }
